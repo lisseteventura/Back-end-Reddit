@@ -11,6 +11,7 @@ public class UserProfileController {
     @Autowired
     UserProfileService userProfileService;
 
+
     //endpoint for creating a user profile if username is given
     @PostMapping("/{username}")
     public UserProfile createUserProfile(@PathVariable String username, @RequestBody UserProfile userProfile){
