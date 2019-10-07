@@ -1,13 +1,13 @@
-package com.example.reddit;
+package com.example.redditApi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RedditApplication {
+public class RedditApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RedditApplication.class, args);
+		SpringApplication.run(RedditApiApplication.class, args);
 	}
 
 }
