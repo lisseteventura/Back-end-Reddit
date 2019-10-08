@@ -1,10 +1,8 @@
 package com.example.redditApi.service;
 import com.example.redditApi.model.Comment;
 import com.example.redditApi.model.Post;
-import com.example.redditApi.model.User;
 import com.example.redditApi.repository.CommentRepository;
 import com.example.redditApi.repository.PostRepository;
-import com.example.redditApi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service
