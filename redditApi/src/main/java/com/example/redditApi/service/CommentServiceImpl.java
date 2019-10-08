@@ -15,12 +15,22 @@ public class CommentServiceImpl implements CommentService {
     UserService userService;
     @Autowired
     PostRepository postRepository;
+
+    //create comment with post id
     @Override
-    public Comment createComment(Comment newComment, Long postId){
+    public Comment createComment(Comment newComment, Long postId) {
         Post post = postRepository.findById(postId).get();
         newComment.setPost(post);
         return commentRepository.save(newComment);
     }
-    public Iterable<Comment> listAllComments(){ return commentRepository.findAll();
+
+    public Iterable<Comment> listAllComments() {
+        return commentRepository.findAll();
+    }
+
+    //delete comment by comment id
+    @Override
+    public void deleteComment(Long commentId) {
+        commentRepository.deleteById(commentId);
     }
 }
