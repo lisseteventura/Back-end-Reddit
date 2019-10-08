@@ -8,8 +8,6 @@ import com.example.redditApi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class PostServiceImpl implements PostService {
     @Autowired
@@ -28,12 +26,19 @@ public class PostServiceImpl implements PostService {
         newPost.setUser(user);
         return postRepository.save(newPost);
     }
+
+    //list all posts
     @Override
     public Iterable<Post> listAllPosts(){
         return postRepository.findAll();
     }
 
+    //delete post by post id
+    @Override
+    public void deletePost(Long postId) {
+        postRepository.deleteById(postId);
 
+    }
 
 
 }
