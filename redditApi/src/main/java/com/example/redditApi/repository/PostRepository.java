@@ -17,6 +17,7 @@ public interface PostRepository extends CrudRepository<Post, Long> {
 //
 //    @Query(" {'user' : ?0}")
 //    public List<Post> findPostByUser(User user);
+    public Iterable<Post> findAllById(String anyString);
 
 
 }

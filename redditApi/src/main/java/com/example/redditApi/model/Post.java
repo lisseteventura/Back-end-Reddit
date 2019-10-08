@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
+import java.util.List;
 
 //helps solve recursion issue
 @JsonIdentityInfo(
@@ -58,5 +59,19 @@ public class Post {
     }
     public void setUser(User user){
         this.user = user;
+    }
+
+    //connecting post to comment
+    @OneToMany(mappedBy = "post",
+            cascade = CascadeType.ALL)
+
+    private List<Comment> comments;
+
+    public List<Comment> getComments(){
+        return comments;
+    }
+
+    public void setComments(List<Comment>comments){
+        this.comments = comments;
     }
 }
