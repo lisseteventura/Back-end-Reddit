@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 //this is an analog for xml file. it will be use to configure our application with security features
 @Configuration
@@ -19,6 +20,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserService userService;
+    @Autowired
+    private JwtRequestFilter jwtRequestFilter;
 
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService);
@@ -40,6 +43,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user/**", "/profile/**", "/post/**", "/comment/**").authenticated()
                 .and()
                 .httpBasic();
+        http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+
     }
 
 
