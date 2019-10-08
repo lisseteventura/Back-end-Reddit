@@ -1,0 +1,24 @@
+//package com.example.redditApi.service;
+//
+//import com.example.redditApi.model.UserRole;
+//import com.example.redditApi.repository.UserRoleRepository;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Service;
+//
+//@Service
+//public class UserRoleServiceImpl implements UserRoleService {
+//
+//    @Autowired
+//    UserRoleRepository userRoleRepository;
+//
+//    @Override
+//    public UserRole createRole(UserRole newRole) {
+//        return userRoleRepository.save(newRole);
+//    }
+//
+//    @Override
+//    public UserRole getRole(String roleName) {
+//        return userRoleRepository.findByName(roleName);
+//    }
+//
+//}

@@ -76,4 +76,14 @@ public class User {
         this.posts = posts;
     }
 
+    //mapping users to user_role table
+//    @ManyToOne(cascade = {CascadeType.DETACH,
+//            CascadeType.MERGE, CascadeType.REFRESH})
+//    @JoinColumn(name = "user_role_id", nullable = false)
+//    private UserRole userRole;
+//
+//    public UserRole getUserRole() { return userRole; }
+//
+//    public void setUserRole(UserRole userRole) { this.userRole = userRole; }
+
 }
