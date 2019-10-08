@@ -28,8 +28,12 @@ public class UserServiceImpl implements UserService {
         return userRepository.login(username, password);
     }
 
+    //get user's username(to create user's profile)
     @Override
     public User getUser(String username){
         return userRepository.findByUsername(username);
     }
+
+
+
 }

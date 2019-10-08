@@ -1,7 +1,15 @@
 package com.example.redditApi.model;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
+import javax.persistence.*;
+import java.util.List;
+//helps solve recursion issue
+
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 @Entity
 @Table(name = "users")
 public class User {
@@ -53,4 +61,19 @@ public class User {
     public void setUserProfile(UserProfile userProfile) {
         this.userProfile = userProfile;
     }
+
+    //connecting user table to post table
+    @OneToMany(mappedBy = "user",
+    cascade = CascadeType.ALL)
+
+    private List<Post> posts;
+
+    public List<Post> getPosts(){
+        return posts;
+    }
+
+    public void setPosts(List<Post>posts){
+        this.posts = posts;
+    }
+
 }

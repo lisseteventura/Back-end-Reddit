@@ -11,4 +11,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     //find user's username(method used in user service)
     public User findByUsername(String username);
+
+
 }

@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface UserProfileRepository extends CrudRepository<UserProfile, Long> {
 
     //left join between User and UserProfile
-    //gets information from left table(user) and matches it with the userProfile id(wrong- change to inner join)
+    //gets information from both tables when there is a match and matches it with the userProfile id
     @Query("from UserProfile up inner join User u on u.username = ?1 and up.id = u.userProfile.id")
     public UserProfile findProfileByUsername(String username);
 }

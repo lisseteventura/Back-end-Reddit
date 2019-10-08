@@ -15,4 +15,6 @@ public interface UserService {
     //get user's username(function later used in UserProfile)
     public User getUser(String username);
 
+
+
 }
