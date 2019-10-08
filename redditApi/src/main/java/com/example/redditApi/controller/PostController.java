@@ -16,4 +16,8 @@ public class PostController {
         return postService.createPost(newPost, username);
     }
 
+    @GetMapping("/list")
+    public Iterable<Post> listAllPosts() {
+        return postService.listAllPosts();
+    }
 }

@@ -28,6 +28,10 @@ public class PostServiceImpl implements PostService {
         newPost.setUser(user);
         return postRepository.save(newPost);
     }
+    @Override
+    public Iterable<Post> listAllPosts(){
+        return postRepository.findAll();
+    }
 
 
 
