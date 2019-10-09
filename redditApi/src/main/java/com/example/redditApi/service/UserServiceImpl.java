@@ -94,6 +94,11 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByUsername(username);
     }
 
+    //injecting dependencies into a bean directly
+    @Autowired
+    UserProfileService userProfileService;
+
+
 
 
 }

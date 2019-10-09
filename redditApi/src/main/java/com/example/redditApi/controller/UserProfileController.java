@@ -23,4 +23,10 @@ public class UserProfileController {
     public UserProfile getUserProfile(@PathVariable String username){
         return userProfileService.getUserProfile(username);
     }
+
+    //we're changing our dependency injection method from field injection to setter injection
+    @Autowired
+    public void setUserProfileService(UserProfileService userProfileService){
+        this.userProfileService = userProfileService;
+    }
 }
