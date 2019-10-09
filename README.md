@@ -7,6 +7,17 @@
 4. Springboot
 5. BootStrap
 
+## The Approach 
+
+We initially brainstormed about using either front end from project 1 or creating a new front end. We came to a conclusion that using a new front end would be more practice and it would help us learn more. After, we sketched an ERD diagram to begin the project to visualize the joining of our tables. The beginning of our files started by creating dependencies from on spring.io and creating a maven project. We created the models for  User, Post, Comment and (implemented) its repositories, Services, Controllers onto them. We included spring security to generate tokens for our users. Junit testing was implemented to simulate the behaviors of our methods in the controller and service package. 
+
+## Unsolved problems & Major hurdles
+
+Issues joining tables in the beginning 
+Creating a posting was a challenege 
+
+## who are your users, what do they want, and why?
+
 
 ## Sketches
 
