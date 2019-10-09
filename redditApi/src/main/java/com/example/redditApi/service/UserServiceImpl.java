@@ -57,10 +57,9 @@ public class UserServiceImpl implements UserService {
 //    public User createUser(User newUser){
 //        return userRepository.save(newUser);
 //    }
+    //When a User signs up we get a newly generated token as a response
     @Override
     public String createUser(User newUser) {
-//        UserRole userRole = userRoleService.getRole(newUser.getUserRole().getName());
-//        newUser.setUserRole(userRole);
         newUser.setUsername(newUser.getUsername());
         newUser.setPassword(newUser.getPassword());
         if(userRepository.save(newUser) != null){
@@ -79,6 +78,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     JwtUtil jwtUtil;
 
+    //login request generates web token for us only if the User's username and password match
     @Override
     public String login(User user){
         if(userRepository.login(user.getUsername(), user.getPassword()) != null){

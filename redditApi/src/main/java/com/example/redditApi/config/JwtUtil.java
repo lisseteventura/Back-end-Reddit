@@ -50,6 +50,7 @@ public class JwtUtil implements Serializable {
         return getClaimFromToken(token, Claims::getExpiration);
     }
 
+    //generating the token using the username
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         return doGenerateToken(claims, userDetails.getUsername());

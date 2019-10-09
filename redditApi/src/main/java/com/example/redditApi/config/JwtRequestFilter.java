@@ -19,6 +19,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import io.jsonwebtoken.ExpiredJwtException;
 
 @Component
+//responsible for parsing our token and using data from it to authenticate the request
 public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Autowired

@@ -18,6 +18,7 @@ public interface UserService extends UserDetailsService {
     //get user's username(function later used in UserProfile)
     public User getUser(String username);
 
+    //method used to generate token once user logs in
     public String login(User user);
 
 
