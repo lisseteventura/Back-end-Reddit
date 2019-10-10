@@ -1,84 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Reddit</title>
+</head>
 
+<body>
 
-    <title>Reddit</title>
-  </head>
-  <body>
+  <nav class="navbar">
+    <a class="navbar-brand"><strong>Reddit</strong></a>
+    <form onSubmit="userLogin(event)" class="form-inline">
+      <!-- nav bar login items -->
+      <input type="text" class="login" placeholder="email" required/><br>
+      <input type="password" class="password" placeholder="password" required/><br>
+      <input id="loginsubmit" type="submit">
+    </form>
 
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">LogIn</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Reddit</h3>
+    <button id="myBtn">Update User</button>
+
+    <!-- having issues with fading the modal in -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Please Update User Fields</p>
+        <form onSubmit="userProfile(event)" class="userForm">
+          <input type="text" class="adEmail" placeholder="additional email">
+          <input type="tel" class="mobile" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12"placeholder="mobile" required/>
+          <span>000-000-0000</span>
+          <input type="text" class="address" placeholder="address">
+          <input id="usersubmit" type="submit">
+        </form>
       </div>
 
-      <div class="jumbotron">
-        <h1 class="display-3">Welcome To Project II</h1>
-        <p class="lead">For this project, We are building a monolithic back-end using Spring Boot and its modules. You'll use PostgreSQL to create your database and Tomcat to run our application.
-</p>
+    </div>
 
+    <!-- dropdown bar -->
+    <!-- <div class="dropdown" style="float:right;">
+      <button id="dropbtn"><strong>USER</strong></button> -->
+      <!-- <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <input type="text" class="mobileUpdate" placeholder="mobile"><br>
+          <input id="mobile" type="submit">
+        </div> -->
+
+      <!-- <div class="dropdown-content">
+        <a href="#">Update Profile</a>
+        <a href="#">Log Out</a>
+      </div>
+    </div> -->
+    <!-- dropdown bar -->
+
+  </nav>
+
+  <!-- signup form -->
+  <form onSubmit="postData(event)" class="signupForm">
+    <!-- <input type="text" class="email" placeholder="email" required/><br> -->
+    <input type="text" class="username" placeholder="username" required/><br>
+    <input type="password" class="pw" placeholder="password" required/><br>
+    <input type="submit" class="signup" value="Sign Up">
+  </form>
+
+  <br>
+
+  <form onSubmit="createPost(event)" class="postForm">
+    <input type="text" class="title" placeholder="title" />
+    <input type="text" class="description" placeholder="description" />
+    <button type="submit" class="createpost">Create a Post!</button>
+  </form>
+
+  <div>
+    </<div>
+  <div class="postStyle">
+    <ul class="thePosts"> </ul>
   </div>
 
-        <div class="container2">
-        	<div class="row">
-
-        	    <div class="col-md-8 col-md-offset-2">
-
-            		<h1>Create post</h1>
-
-            		<form action="" method="POST">
-
-
-            		    <div class="form-group">
-            		        <label for="title">Title <span class="require"></span></label>
-            		        <input type="text" class="form-control" name="title" />
-            		    </div>
-
-            		    <div class="form-group">
-            		        <label for="description">Description</label>
-            		        <textarea rows="5" class="form-control" name="description" ></textarea>
-            		    </div>
-            		    <div class="form-group">
-            		        <button type="submit" class="btn btn-primary">
-            		            Create
-            		        </button>
-            		        <button class="btn btn-default">
-            		            Cancel
-            		        </button>
-            		    </div>
-
-            		</form>
-        		</div>
-
-        	</div>
-        </div>
-
-      <div id="posts" class="rowmarketing">
-        <div class="col-lg-6">
-          <h4>Post Listing</h4>
-          <p>Posts</p>
+      <!-- <div class="card-body">
+        <p class="posts"></p>
+        <a href="#" id="comment" class="btn-btn-primary">Comment</a>
+        <a href="#" id="delete" class="btn-btn-primary">Delete</a>
       </div>
-    </div> <!-- /container -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+    </div> -->
+
+    <script src="js/script.js"></script>
+</body>
+
 </html>
