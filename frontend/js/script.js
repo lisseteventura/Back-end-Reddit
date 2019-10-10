@@ -1,8 +1,11 @@
+let user;
+
 function postData(event) {
   event.preventDefault();
   // const email = document.querySelector('.email');
   const password = document.querySelector(".pw");
   const username = document.querySelector(".username");
+  user = username.value;
   console.log(username.value, password.value);
   fetch("http://localhost:8080/signup", {
     method: "POST",
@@ -33,6 +36,7 @@ function userLogin(event) {
   const username = document.querySelector(".login");
   const password = document.querySelector(".password");
   console.log(username.value, password.value);
+  user = username.value;
   fetch("http://localhost:8080/login", {
     method: "POST",
     headers: {
@@ -207,7 +211,7 @@ function userProfile(event) {
   const mobile = document.querySelector(".mobile");
   const address = document.querySelector(".address");
   console.log(adEmail.value, mobile.value, address.value);
-  fetch("http://thesi.generalassemb.ly:8080/profile", {
+  fetch(`http://localhost:8080/profile/${user}`, {
     method: "POST",
     headers: {
       Authorization: "Bearer " + localStorage.getItem("user"),
@@ -220,8 +224,9 @@ function userProfile(event) {
     })
   })
     .then(res => {
+      res.json();
       console.log(res);
-      updateDom(res);
+      // updateDom(res);
     })
     .catch(err => {
       console.log(err);
