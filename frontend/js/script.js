@@ -56,6 +56,7 @@ function userLogin(event) {
       // if(res.httpStatus !== 'BAD_REQUEST')
       if (localStorage.getItem("user") !== "undefined") {
         alert("Welcome to Reddit!");
+        //makes login form disppear once user logs in
         document.querySelector(".form-inline").style.display = "none";
       } else {
         alert("Email and Password is invalid, please try again");
@@ -105,7 +106,7 @@ function createPost(event) {
   event.preventDefault();
   const title = document.querySelector(".title");
   const description = document.querySelector(".description");
-  fetch("http://localhost:8080/post/create/{username}", {
+  fetch(`http://localhost:8080/post/create/${user}`, {
     method: "POST",
     headers: {
       Authorization: "Bearer " + localStorage.getItem("user"),
