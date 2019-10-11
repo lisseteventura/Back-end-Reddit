@@ -61,6 +61,7 @@ function userLogin(event) {
       } else {
         alert("Email and Password is invalid, please try again");
       }
+
       //      window.location.href = "index.html";
       //     }else{
       //      localStorage.clear();
@@ -139,10 +140,10 @@ function displayAll(event) {
       return res.json();
     })
     .then(res => {
-      console.log(res);
       const list = document.querySelector(".thePosts");
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 20; i++) {
         // if (i <= 10) {
+        console.log(res[i]);
         const item = document.createElement("li");
         item.id = res[i].id;
         const title = document.createElement("h3");
@@ -212,6 +213,7 @@ function userProfile(event) {
   const mobile = document.querySelector(".mobile");
   const address = document.querySelector(".address");
   console.log(adEmail.value, mobile.value, address.value);
+  console.log(user);
   fetch(`http://localhost:8080/profile/${user}`, {
     method: "POST",
     headers: {
@@ -219,7 +221,7 @@ function userProfile(event) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      additionalEmail: adEmail.value,
+      email: adEmail.value,
       mobile: mobile.value,
       address: address.valiue
     })
@@ -233,6 +235,47 @@ function userProfile(event) {
       console.log(err);
     });
 }
+//allows user to get information about their profile
+function getProfile(event) {
+  fetch(`http://localhost:8080/profile/${user}`, {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("user"),
+      "Content-Type": "application/json"
+    }
+  })
+    .then(res => {
+      return res.json();
+    })
+    .then(res => {
+      console.log(res);
+      const seeProfile = document.querySelector(".profile");
+      document.querySelector(".additional").innerText += " " + res.email;
+      document.querySelector(".mobile").innerHTML += " " + res.mobile;
+      document.querySelector(".address").innerHTML += " " + res.address;
+      // });
+      // updateDom(res);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+document.querySelector("#myBtn2").addEventListener("click", getProfile);
+
+var modal2 = document.getElementById("myProfile");
+var btn2 = document.getElementById("myBtn2");
+var span2 = document.getElementsByClassName("close2")[0];
+btn2.onclick = function() {
+  modal2.style.display = "block";
+};
+span2.onclick = function() {
+  modal2.style.display = "none";
+};
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+};
 
 // function getUser(event){
 //   event.preventDefault();

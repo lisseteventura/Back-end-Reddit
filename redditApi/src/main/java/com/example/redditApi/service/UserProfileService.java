@@ -9,4 +9,6 @@ public interface UserProfileService {
 
     //get user's profile information if username is given.
     public UserProfile getUserProfile(String username);
+
+
 }
