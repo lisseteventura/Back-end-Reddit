@@ -1,6 +1,8 @@
 package com.example.redditApi.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
@@ -52,8 +54,10 @@ public class Post {
     @ManyToOne(cascade = {CascadeType.DETACH,
     CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "users_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private User user;
 
+    @JsonIgnore
     public User getUser(){
         return user;
     }

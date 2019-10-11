@@ -20,9 +20,7 @@ public class PostController {
     }
 
     @GetMapping("/list")
-    public Iterable<Post> listAllPosts() {
-        return postService.listAllPosts();
-    }
+    public Iterable<Post> listAllPosts() { return postService.listAllPosts(); }
 
     @DeleteMapping("/{postId}")
     public HttpStatus deletePost(@PathVariable Long postId) {

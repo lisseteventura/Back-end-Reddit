@@ -83,9 +83,11 @@ function updateDom() {
     }
   })
     .then(res => {
+      console.log(res);
       return res.json();
     })
     .then(res => {
+      console.log(res);
       const list = document.querySelector(".thePosts");
       for (let i = 0; i < res.length; i++) {
         const item = document.createElement("li");
@@ -128,37 +130,39 @@ function createPost(event) {
 }
 
 //this function lists all point
-function displayAll(event) {
-  const allPosts = document.querySelector(".postForm");
-  fetch("http://localhost:8080/post/list", {
-    method: "GET",
-    headers: {
-      "Content-Type": "  application/json"
-    }
-  })
-    .then(res => {
-      return res.json();
-    })
-    .then(res => {
-      const list = document.querySelector(".thePosts");
-      for (let i = 0; i < 20; i++) {
-        // if (i <= 10) {
-        console.log(res[i]);
-        const item = document.createElement("li");
-        item.id = res[i].id;
-        const title = document.createElement("h3");
-        const description = document.createElement("p");
-        item.appendChild(title);
-        item.appendChild(description);
-        title.innerText = res[i].title;
-        description.innerText = res[i].description;
-        list.appendChild(item);
-        allComments(res[i].id);
-        // }
-      }
-    });
-}
-displayAll();
+// function displayAll(event) {
+//   const allPosts = document.querySelector(".postForm");
+//   fetch("http://localhost:8080/post/list", {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "  application/json"
+//     }
+//   })
+//     .then(res => {
+//       console.log(res);
+//       return res.json();
+//     })
+//     .then(res => {
+//       const list = document.querySelector(".thePosts");
+//       console.log(res);
+//       for (let i = 0; i < 20; i++) {
+//         // if (i <= 10) {
+//         console.log(res[i]);
+//         const item = document.createElement("li");
+//         item.id = res[i].id;
+//         const title = document.createElement("h3");
+//         const description = document.createElement("p");
+//         item.appendChild(title);
+//         item.appendChild(description);
+//         title.innerText = res[i].title;
+//         description.innerText = res[i].description;
+//         list.appendChild(item);
+//         allComments(res[i].id);
+//         // }
+//       }
+//     });
+// }
+// displayAll();
 
 // function allComments(postId) {
 //   fetch(`http://thesi.generalassemb.ly:8080/post/${postId}/comment`, {

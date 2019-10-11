@@ -1,6 +1,8 @@
 package com.example.redditApi.model;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
@@ -19,6 +21,7 @@ public class Comment {
     private String comment;
 
     public Comment(){}
+
     public Long getId(){
         return id;
     }
@@ -34,7 +37,11 @@ public class Comment {
     @ManyToOne(cascade = {CascadeType.DETACH,
             CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "post_id")
+
+    @JsonProperty(access= JsonProperty.Access.WRITE_ONLY)
     private Post post;
+
+    @JsonIgnore
     public Post getPost(){
         return post;
     }
