@@ -13,6 +13,10 @@ public class CommentController {
     @Autowired
     CommentService commentService;
 
+    @Autowired
+    public void setCommentService(CommentService commentService){
+        this.commentService = commentService;
+    }
     //create comments with post id
     @PostMapping("/create/{postId}")
     public Comment createComment(@PathVariable Long postId, @RequestBody Comment newComment) {
