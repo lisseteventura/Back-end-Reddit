@@ -18,7 +18,8 @@ public class UserProfileControllerTest {
     @Test
     public void createUserProfile_SaveUserProfile_Success(){
         UserProfile userProfile = new UserProfile();
-        userProfile.setEmail("batman@superhero.com");
+        //if the email address is different from the email that's in the UserProfileServiceStub then you'll get an error
+        userProfile.setEmail("test@test.com");
 
         UserProfile newProfile = userProfileController.createUserProfile("batman", userProfile);
 

@@ -37,7 +37,7 @@ public class Comment {
     @ManyToOne(cascade = {CascadeType.DETACH,
             CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "post_id")
-
+    //fixes nested issues
     @JsonProperty(access= JsonProperty.Access.WRITE_ONLY)
     private Post post;
 

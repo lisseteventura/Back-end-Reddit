@@ -6,7 +6,7 @@ public class UserProfileServiceStub implements UserProfileService {
     @Override
     public UserProfile createUserProfile(String username, UserProfile newProfile) {
         UserProfile userProfile = new UserProfile();
-        userProfile.setEmail("batman@superhero.com");
+        userProfile.setEmail("test@test.com");
 
         return userProfile;    }
 
