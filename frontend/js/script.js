@@ -233,6 +233,7 @@ function userProfile(event) {
     .then(res => {
       res.json();
       console.log(res);
+      alert("Thanks for updating your profile!");
       // updateDom(res);
     })
     .catch(err => {
