@@ -98,6 +98,10 @@ function updateDom() {
         title.innerText = res[i].title;
         description.innerText = res[i].description;
         list.appendChild(item);
+        // delPost();
+        var btn = document.createElement("BUTTON");
+        btn.innerHTML = "DELETE";
+        list.appendChild(btn);
       }
     })
     .catch(err => {
@@ -258,6 +262,7 @@ function getProfile(event) {
       document.querySelector(".additional").innerText += " " + res.email;
       document.querySelector(".mobile").innerHTML += " " + res.mobile;
       document.querySelector(".address").innerHTML += " " + res.address;
+
       // });
       // updateDom(res);
     })
@@ -282,6 +287,11 @@ window.onclick = function(event) {
   }
 };
 
+// function delPost() {
+//   var btn = document.createElement("BUTTON");
+//   btn.innerHTML = "CLICK ME";
+//   document.body.appendChild(btn);
+// }
 // function getUser(event){
 //   event.preventDefault();
 //   fetch('http://thesi.generalassemb.ly:8080/profile',{
