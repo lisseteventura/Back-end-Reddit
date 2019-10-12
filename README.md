@@ -1,6 +1,6 @@
 ## Reddit-Clone: Project Two
 
-# Technologies Used
+## Technologies Used
 1. HTML/CSS/JavaScript
 2. Java
 3. PostgreSQL
@@ -14,9 +14,13 @@ We initially brainstormed about using either front end from project 1 or creatin
 ## Unsolved problems & Major hurdles
 
 Issues joining tables in the beginning 
-Creating a posting was a challenege 
+Creating a posting was a challenge 
 
-## who are your users, what do they want, and why?
+## User Stories
+1. As a user, I want to make posts about different topics so that I can share my thoughts.
+2. 
+3.
+4.
 
 
 ## Sketches
