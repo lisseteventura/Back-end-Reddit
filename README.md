@@ -9,7 +9,7 @@
 
 ## The Approach 
 
-We initially brainstormed about using either front end from project 1 or creating a new front end. We came to a conclusion that using a new front end would be more practice and it would help us learn more. After, we sketched an ERD diagram to begin the project to visualize the joining of our tables. The beginning of our files started by creating dependencies from on spring.io and creating a maven project. We created the models for  User, Post, Comment and (implemented) its repositories, Services, Controllers onto them. We included spring security to generate tokens for our users. Junit testing was implemented to simulate the behaviors of our methods in the controller and service package. 
+We initially debated about using the front-end from project 1 or creating a new front-end. We came to the conclusion that using a new front-end would allow us to practice our HTML/CSS/JavaScript skills. We then sketched an ERD diagram to begin visualizing the joining of our tables. The beginning of our files started by choosing the dependencies from spring.io and creating a maven project. We first created the models for  User, Post and Comments followed by the repositories, services and  controllers for each. We populated our tables through Postman and made sure our tables joined correctly before moving on. We then included spring security to generate tokens for our users. Junit testing was also implemented to simulate the behaviors of our methods in the controller and service package. 
 
 ## Unsolved problems & Major hurdles
 
