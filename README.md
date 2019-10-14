@@ -13,8 +13,14 @@ We initially brainstormed about using either front end from project 1 or creatin
 
 ## Unsolved problems & Major hurdles
 
-Issues joining tables in the beginning 
-Creating a posting was a challenge 
+Our hurdles included:
+
+1. Difficulties joining tables in the beginning
+2. User's post and comments were nested within each other making it difficult to appear on the front-end
+3. After a user would make a post it would appear as "undefined".
+4. The 'My Profile' button only shows the user's email and not the address and mobile. 
+
+Most of our unsolved problems are because we didn't get to link the back-end to the front-end. Therefore functionalities such as deleting posts and viewing/creating comments don't work.
 
 ## User Stories
 1. As a Reddit user, I want to make posts about different topics so that I can share my thoughts.
