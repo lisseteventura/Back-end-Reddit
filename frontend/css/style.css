@@ -1,40 +1,103 @@
 body {
-  background-color: ;
+  background: #283048; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #859398,
+    #283048
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #859398,
+    #283048
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
 nav {
-  background-color: lightblue;
-  margin-bottom: 10px;
+  background: #a73737; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #7a2828,
+    #a73737
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #7a2828,
+    #a73737
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
-#myBtn {
-  background-color: ;
+h1 {
+  color: black;
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
 }
-
+#myBtn,
+#loginsubmit,
+.signup,
+#myBtn2,
+.createpost,
+#usersubmit {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+.signup {
+  margin-left: 40px;
+}
+#myBtn:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+#loginsubmit:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+.signup:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+#myBtn2:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+.createpost:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+#usersubmit:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
 .signup {
   background-color: ;
 }
-
 .createpost {
   color: black;
   background-color: ;
 }
-
 #loginsubmit {
   color: black;
   background-color: ;
 }
-
 .navbar {
   /* margin: 10px; */
 }
-
-.navbar-brand {
-  margin: 10px;
-  text-shadow: 2px 4px white;
-  font-size: 30px;
-}
-
 .card {
   margin: 30px;
   background-color: #c8b9fe;
@@ -42,36 +105,28 @@ nav {
   display: flex;
   flex-direction: column-reverse;
 }
-
 .postForm {
   text-align: center;
 }
-
 .signupForm {
   margin-left: 20px;
 }
-
 .email {
   margin: 2px;
 }
-
 .pw {
   margin: 2px;
 }
-
 .username {
   margin: 2px;
 }
-
 #delete {
   color: red;
   padding: 10px;
 }
-
 #comment {
   color: red;
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -84,7 +139,6 @@ nav {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -92,21 +146,18 @@ nav {
   border: 1px solid #888;
   width: 40%;
 }
-
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-
 .postStyle {
   display: flex;
   flex-direction: column-reverse;
@@ -120,7 +171,6 @@ nav {
 ul {
   display: flex;
   flex-direction: column-reverse;
-  list-style: none;
 }
 li {
   /* display: flex;
@@ -142,7 +192,6 @@ li {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
-
 /* Profile Content */
 .profile-content {
   background-color: #fefefe;
@@ -151,7 +200,6 @@ li {
   border: 1px solid #888;
   width: 40%;
 }
-
 /* The Close Button */
 .close2 {
   color: #aaaaaa;
@@ -159,7 +207,6 @@ li {
   font-size: 28px;
   font-weight: bold;
 }
-
 .close2:hover,
 .close2:focus {
   color: black;

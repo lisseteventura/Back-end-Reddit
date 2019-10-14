@@ -9,12 +9,17 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    ​
     <title>Reddit</title>
   </head>
-
+  ​
   <body>
     <nav class="navbar">
-      <a class="navbar-brand"><strong>Reddit</strong></a>
+      <a class="navbar-brand"><h1>REDDIT</h1></a>
       <form onSubmit="userLogin(event)" class="form-inline">
         <!-- nav bar login items -->
         <input
@@ -29,17 +34,17 @@
           placeholder="password"
           required
         /><br />
-        <input id="loginsubmit" type="submit" value="Log in" />
+        <input id="loginsubmit" type="submit" value="Log In" />
       </form>
-
+      ​
       <button id="myBtn">Update Profile</button>
-
+      ​
       <!-- having issues with fading the modal in -->
       <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close">&times;</span>
-          <p>Please Update User Fields</p>
+          <p><strong>Update Your Information</strong></p>
           <form onSubmit="userProfile(event)" class="userForm">
             <input type="text" class="adEmail" placeholder="email" />
             <input
@@ -50,14 +55,14 @@
               placeholder="mobile"
               required
             />
-            <span>000-000-0000</span>
+            <span>(000)-000-0000</span>
             <input type="text" class="address" placeholder="address" />
             <input id="usersubmit" type="submit" />
           </form>
         </div>
       </div>
       <button id="myBtn2">My Profile</button>
-
+      ​
       <div id="myProfile" class="profile">
         <!-- Modal content -->
         <div class="profile-content">
@@ -68,7 +73,7 @@
         </div>
       </div>
     </nav>
-
+    ​
     <!-- signup form -->
     <form onSubmit="postData(event)" class="signupForm">
       <!-- <input type="text" class="email" placeholder="email" required/><br> -->
@@ -81,28 +86,28 @@
       <input type="password" class="pw" placeholder="password" required /><br />
       <input type="submit" class="signup" value="Sign Up" />
     </form>
-
+    ​
     <br />
-
+    ​
     <form onSubmit="createPost(event)" class="postForm">
       <input type="text" class="title" placeholder="title" />
       <input type="text" class="description" placeholder="description" />
       <button type="submit" class="createpost">Create a Post!</button>
     </form>
-
+    ​
     <div class="postStyle">
       <ul class="thePosts"></ul>
     </div>
     <!-- <div class="">
     </<div> -->
-
+    ​
     <!-- <div class="card-body">
         <p class="posts"></p>
         <a href="#" id="comment" class="btn-btn-primary">Comment</a>
         <a href="#" id="delete" class="btn-btn-primary">Delete</a>
       </div>
     </div> -->
-
+    ​
     <script src="js/script.js"></script>
   </body>
 </html>
