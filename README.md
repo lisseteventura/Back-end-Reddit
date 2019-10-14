@@ -20,13 +20,13 @@ Our hurdles included:
 3. After a user would make a post it would appear as "undefined".
 4. The 'My Profile' button only shows the user's email and not the address and mobile. 
 
-Most of our unsolved problems are because we didn't get to link the back-end to the front-end. Therefore functionalities such as deleting posts and viewing/creating comments don't work.
+Most of our unsolved problems are in the front-end because we didn't get to link the back-end to the front-end completely. Therefore functionalities such as deleting posts and viewing/creating comments don't work.
 
 ## User Stories
 1. As a Reddit user, I want to make posts about different topics so that I can share my thoughts.
 2. As a Reddit user, I need to to be able to log in and keep my posts under my account so I can share my ideas.	
 3. As a Reddit user, I would like to comment on other users posts to give feed back.	
-4. As a Reddit, I would like to delete a post if I change my mind. 
+4. As a Reddit user, I would like to delete a post if I change my mind. 
 
 
 ## Sketches
