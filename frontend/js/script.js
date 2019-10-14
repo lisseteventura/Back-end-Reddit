@@ -98,7 +98,7 @@ function updateDom() {
         title.innerText = res[i].title;
         description.innerText = res[i].description;
         list.appendChild(item);
-        // delPost();
+
         var btn = document.createElement("BUTTON");
         btn.innerHTML = "DELETE";
         list.appendChild(btn);
@@ -287,11 +287,11 @@ window.onclick = function(event) {
   }
 };
 
-// function delPost() {
-//   var btn = document.createElement("BUTTON");
-//   btn.innerHTML = "CLICK ME";
-//   document.body.appendChild(btn);
-// }
+function delPost() {
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "CLICK ME";
+  document.body.appendChild(btn);
+}
 // function getUser(event){
 //   event.preventDefault();
 //   fetch('http://thesi.generalassemb.ly:8080/profile',{
