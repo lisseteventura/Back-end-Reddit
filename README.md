@@ -17,10 +17,10 @@ Issues joining tables in the beginning
 Creating a posting was a challenge 
 
 ## User Stories
-1. As a user, I want to make posts about different topics so that I can share my thoughts.
-2. 
-3.
-4.
+1. As a Reddit user, I want to make posts about different topics so that I can share my thoughts.
+2. As a Reddit user, I need to to be able to log in and keep my posts under my account so I can share my ideas.	
+3. As a Reddit user, I would like to comment on other users posts to give feed back.	
+4. As a Reddit, I would like to delete a post if I change my mind. 
 
 
 ## Sketches
