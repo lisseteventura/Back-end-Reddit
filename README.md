@@ -1,6 +1,6 @@
 ## Reddit-Clone: Project Two
 
-# Technologies Used
+## Technologies Used
 1. HTML/CSS/JavaScript
 2. Java
 3. PostgreSQL
@@ -9,14 +9,24 @@
 
 ## The Approach 
 
-We initially brainstormed about using either front end from project 1 or creating a new front end. We came to a conclusion that using a new front end would be more practice and it would help us learn more. After, we sketched an ERD diagram to begin the project to visualize the joining of our tables. The beginning of our files started by creating dependencies from on spring.io and creating a maven project. We created the models for  User, Post, Comment and (implemented) its repositories, Services, Controllers onto them. We included spring security to generate tokens for our users. Junit testing was implemented to simulate the behaviors of our methods in the controller and service package. 
+We initially debated about using the front-end from project 1 or creating a new front-end. We came to the conclusion that using a new front-end would allow us to practice our HTML/CSS/JavaScript skills. We then sketched an ERD diagram to begin visualizing the joining of our tables. The beginning of our files started by choosing the dependencies from spring.io and creating a maven project. We first created the models for  User, Post and Comments followed by the repositories, services and  controllers for each. We populated our tables through Postman and made sure our tables joined correctly before moving on. We then included spring security to generate tokens for our users. Junit testing was also implemented to simulate the behaviors of our methods in the controller and service package. 
 
 ## Unsolved problems & Major hurdles
 
-Issues joining tables in the beginning 
-Creating a posting was a challenege 
+Our hurdles included:
 
-## who are your users, what do they want, and why?
+1. Difficulties joining tables in the beginning
+2. User's post and comments were nested within each other making it difficult to appear on the front-end
+3. After a user would make a post it would appear as "undefined".
+4. The 'My Profile' button only shows the user's email and not the address and mobile. 
+
+Most of our unsolved problems are because we didn't get to link the back-end to the front-end. Therefore functionalities such as deleting posts and viewing/creating comments don't work.
+
+## User Stories
+1. As a Reddit user, I want to make posts about different topics so that I can share my thoughts.
+2. As a Reddit user, I need to to be able to log in and keep my posts under my account so I can share my ideas.	
+3. As a Reddit user, I would like to comment on other users posts to give feed back.	
+4. As a Reddit, I would like to delete a post if I change my mind. 
 
 
 ## Sketches
